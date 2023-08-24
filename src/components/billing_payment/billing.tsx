@@ -12,6 +12,7 @@ import TableBody from '@mui/material/TableBody';
 import TablePagination from '@mui/material/TablePagination';
 import PrintOutlinedIcon from '@mui/icons-material/PrintOutlined';
 import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
+import { Grid } from '@mui/material';
 
 
 function StickyHeadTable1() {
@@ -94,11 +95,8 @@ function StickyHeadTable1() {
     };
   
     return (
-      <Paper sx={{ display: "flex", maxWidth: "100%",marginLeft:'0%', flexDirection: "column", 
-      alignItems: "flex-start", gap: "10px", height: '678px', borderRadius: "5px", 
-      border: "1px solid rgba(0, 0, 0, 0.12)", background: "#FFF", overflow: 'hidden', 
-      position: 'relative' }}>
-        <TableContainer sx={{ maxHeight: 678 }}>
+      <Paper sx={{ display: 'table', width: '1000px', height: '700px', margin: 'auto', borderRadius: '5px', border: '1px solid rgba(0, 0, 0, 0.12)', background: '#FFF', overflow: 'auto', alignItems: "flex-start", gap: "1px", position: 'relative' }}>
+      <TableContainer sx={{ height: 678, position: 'absolute', bottom: 0, left: 0, right: 0 }}>
           <Table stickyHeader aria-label="sticky table">
             <TableHead>
               <TableRow>
@@ -209,7 +207,7 @@ function StickyHeadTable2() {
     return { paymentId, paymentDate, dueDate, amountDue , action};
   }
 
-  const rows = Array.from({ length: 40 }, (_, index) =>
+  const rows = Array.from({ length: 100 }, (_, index) =>
     createPaymentData(`Payment-${index + 1}`, `2023-08-0${index + 1}`, `2023-08-2${index + 1}`, generateRandomAmount() ,'')
   );
 
@@ -226,24 +224,8 @@ function StickyHeadTable2() {
   };
 
   return (
-    <Paper
-      sx={{
-        display: 'flex',
-        maxWidth: '100%',
-        marginLeft: '0%',
-        marginTop: '0%',
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-        gap: '10px',
-        height: '678px',
-        borderRadius: '5px',
-        border: '1px solid rgba(0, 0, 0, 0.12)',
-        background: '#FFF',
-        // overflow: 'hidden',
-        position: 'absolute',
-      }}
-    >
-      <TableContainer sx={{ maxHeight: 678 }}>
+    <Paper sx={{ display: 'flex', width: '1000px', height: '700px', margin: 'auto', flexDirection: 'column', alignItems: 'flex-start', gap: '10px', borderRadius: '5px', border: '1px solid rgba(0, 0, 0, 0.12)', background: '#FFF', overflow: 'hidden', position: 'relative' }}>
+    <TableContainer sx={{ maxHeight: 678, width: '100%', position: 'absolute', bottom: 0, left: 0, right: 0 }}>
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
             <TableRow>
@@ -324,35 +306,20 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box
-      sx={{
-        width: '100%',
-        height: '100%',
-        display: 'flex',
-        marginLeft: '5.5%',
-        marginTop: '0%',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'flex-start',
-      }}
-    >
-      <Box sx={{ borderBottom: 1, borderColor: 'divider', width: '100%', marginLeft: '33.4%', marginTop: '25%' }}>
+<Grid container item xs={12}>
+    <Box sx={{ width: "1000px", height: "700px", display: "flex", margin: "auto", flexDirection: "column", alignItems: "center", justifyContent: "flex-start", marginTop: "50px" }}>
+      <Box sx={{ borderBottom: 1, borderColor: "divider", width: "100%", marginLeft: "24%", marginTop: "25%" }}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
           <Tab label="BILLING" {...a11yProps(0)} />
           <Tab label="PAYMENTS" {...a11yProps(1)} />
         </Tabs>
       </Box>
-      <Box
-        sx={{
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: '10px',
-        }}
-      >
+      <Box sx={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: "10px" }}>
         {value === 0 ? <TabPanelOne /> : <TabPanelTwo />}
       </Box>
+
     </Box>
+    </Grid>
+
   );
 }

@@ -63,7 +63,7 @@ export default function BillCard() {
   return (
     <StyledCard
       className="main-card"
-      sx={{ maxWidth: 675, backgroundColor: "transparent", marginLeft:'312px', marginTop: '198px', position: 'absolute' }}
+      sx={{ maxWidth: 675, backgroundColor: "transparent",   }}
     >
       {/* First Row */}
       <Row>

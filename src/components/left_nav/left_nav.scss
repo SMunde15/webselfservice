@@ -1,0 +1,133 @@
+.my-container {
+    padding: 30px 20px;
+    flex-direction: column;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    background: #1A455D;
+    display: block; 
+    max-width: 260px !important;
+    margin-top: 15px; 
+  }
+  
+
+  .block {
+    display: flex;
+    padding: 10px 5px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -15px;
+    gap: 10px;
+    border-radius: 25px;
+    background: #1A455D;
+    z-index: -20;
+    max-width: 260px;
+    }
+  
+  .line {
+    height: 2px;
+    flex-shrink: 0;
+    align-self: stretch;
+    background: rgba(227, 227, 227, 0.20);
+  }
+  
+  .line2 {
+    height: 2px;
+    flex-shrink: 0;
+    align-self: stretch;
+    background: rgba(227, 227, 227, 0.20);
+  }
+
+.logo img {
+    width: 100px;
+    height: 5px;
+    align-self: stretch;
+}
+.content{
+  color: #8CA1AD;
+  font-family: Verdana;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items:normal;
+    gap: 10px;
+    justify-content:space-between;
+  }
+  
+.MuiButtonBase-root.MuiButton-root.normal-button.MuiButton-contained {
+    display: flex;
+    padding: 15px 10px;
+    align-items:start;
+    justify-content: left;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 5px;
+    background: rgba(202, 14, 14, 0);
+    color: #FFF;
+    background-color:#1A455D;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 50;
+    line-height: 25px;
+    text-transform:none;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.26);
+      color: #ececec;
+    }
+    &:active {
+      background-color: rgba(255, 255, 255, 0.423);
+      color: rgba(255, 255, 255, 0.958);
+    }
+    box-shadow:none ;
+  }
+  .MuiButtonBase-root.MuiButton-root.logout.MuiButton-contained {
+    display: flex;
+    padding: 15px 10px;
+    align-items:start;
+    justify-content: left;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0);
+    color: #fa707b;
+    background-color:#1A455D;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    text-transform:none;
+    &:hover {
+      background-color: rgba(216, 53, 53, 0.26);
+      color: #ececec;
+    }
+    &:active {
+      background-color: rgba(218, 32, 32, 0.135);
+      color: rgba(255, 255, 255, 0.958);
+    }
+    box-shadow:none ;
+  }
+  .drawer {
+    flex-shrink: 0;
+    & .MuiDrawer-paper {
+      width: 220px;
+      box-sizing: border-box;
+      background-color: #1A455D;
+      max-height: 100%;
+      border-radius: 2px;
+    }
+  }
+  
+  .variant-persistent {
+    @extend .drawer;
+  }
+  
+  .anchor-left {
+    @extend .drawer;
+  }
