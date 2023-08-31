@@ -277,7 +277,7 @@ export default function ButtonList() {
       <Button className="normal-button" variant="contained" startIcon={<FolderCopyOutlinedIcon />}>
       Billing and Payment History
       </Button>
-      <Container sx={{ height:{xs : '12rem' , sm : '12rem'}  }} />
+      <Container sx={{ height:{xs : '10rem' , sm : '5rem'}  }} />
       <Button className="normal-button" variant="contained" startIcon={<Person2OutlinedIcon />}>
       Profile
       </Button>

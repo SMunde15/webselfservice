@@ -33,7 +33,7 @@ const LeftNav: React.FC = () => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
 
-      <Grid container spacing={0}>
+      <Grid container spacing={0} justifyContent={"start"}>
         <Grid item xs={12} sm={12}>
           {shouldDisplayDrawer ? (
             <TemporaryDrawer  /> 
